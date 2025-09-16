@@ -1,0 +1,81 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid rgba(20, 30, 60, 0.03);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* bell */
+.bell {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #f3f8ff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2b6bff;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(12, 40, 100, 0.06);
+}
+.bell svg {
+  width: 20px;
+  height: 20px;
+}
+.notif-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2b6bff;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(43, 107, 255, 0.28);
+}
+
+/* avatar */
+.avatar-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(180deg, #ffffff 0%, #e8f4ff 100%);
+  box-shadow: 0 6px 18px rgba(15, 47, 85, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* name/email */
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #2b3b4a;
+}
+.email {
+  font-size: 12px;
+  font-weight: 500;
+  color: #93a3b6;
+}

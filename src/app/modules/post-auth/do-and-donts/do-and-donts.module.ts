@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DoAndDontsComponent } from './do-and-donts.component';
+import { DoAndDontsRoutingModule } from './do-and-donts-routing.module';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    DoAndDontsComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    DoAndDontsRoutingModule
   ]
 })
 export class DoAndDontsModule { }

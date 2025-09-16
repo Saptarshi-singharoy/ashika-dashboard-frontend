@@ -1,0 +1,71 @@
+<nav class="side-menu" aria-label="Main navigation">
+  <div class="brand">
+    <img src="assets/images/sign-in/logo.png" alt="Sathi logo" />
+  </div>
+
+  <ul>
+    <li>
+      <a routerLink="/post-auth/dashboard"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }">
+        <span class="icon">
+          <img src="assets/images/sidebar/dash.png" alt="">
+        </span>
+        <span class="label">Dashboard</span>
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="/post-auth/client-management"
+         routerLinkActive="active">
+        <span class="icon">
+          <img src="assets/images/sidebar/cm.png" alt="">
+        </span>
+        <span class="label">Client Management</span>
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="/post-auth/revenue-analysis" routerLinkActive="active">
+        <span class="icon">
+          <img src="assets/images/sidebar/ra.png" alt="">
+        </span>
+        <span class="label">Revenue Analysis</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/post-auth/client-activity" routerLinkActive="active">
+        <span class="icon">
+          <img src="assets/images/sidebar/ca.png" alt="">
+        </span>
+        <span class="label">Client Activity</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/post-auth/details" routerLinkActive="active">
+        <span class="icon">
+          <img src="assets/images/sidebar/dets.png" alt="">
+        </span>
+        <span class="label">Details</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/post-auth/do-and-donts" routerLinkActive="active">
+        <span class="icon">
+          <img src="assets/images/sidebar/dd.png" alt="">
+        </span>
+        <span class="label">DO&Don't</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/post-auth/change-format" routerLinkActive="active">
+        <span class="icon">
+          <img src="assets/images/sidebar/cf.png" alt="">
+        </span>
+        <span class="label">Change Format</span>
+      </a>
+    </li>
+
+    <!-- add the rest of the links similarly -->
+  </ul>
+</nav>

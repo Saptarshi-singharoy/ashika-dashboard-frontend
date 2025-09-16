@@ -1,0 +1,19 @@
+<!-- wrapper: sidebar left + content right -->
+<div class="postauth-root">
+  <!-- left: static side menu -->
+  <aside class="side-col">
+    <!-- your reusable side menu component -->
+    <app-side-menu></app-side-menu>
+  </aside>
+
+  <!-- right: topbar + dynamic content area -->
+  <section class="content-col">
+    <!-- optional topbar (search, avatar) -->
+  <app-top-bar></app-top-bar>
+
+    <!-- dynamic content area: lazy-loaded routes will render here -->
+    <main class="page-area">
+      <router-outlet></router-outlet>
+    </main>
+  </section>
+</div>

@@ -1,0 +1,37 @@
+.postauth-root {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f8fb;
+}
+
+/* Sidebar column */
+.side-col {
+  width: 260px; // static width for sidebar
+  flex: 0 0 260px; // do not shrink
+  background: #ffffff;
+  border-right: 1px solid rgba(20, 30, 60, 0.04);
+  display: flex;
+  flex-direction: column;
+  /* keep sidebar full height and not scroll the whole page */
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+}
+
+/* Right column (topbar + content) */
+.content-col {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* topbar */
+
+/* main scrollable area where routed components appear */
+.page-area {
+  flex: 1 1 auto;
+  overflow-y: auto; /* make only the right content scrollable */
+  padding: 22px;
+  -webkit-overflow-scrolling: touch;
+}
