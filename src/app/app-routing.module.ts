@@ -5,6 +5,9 @@ const routes: Routes = [
   {path:'pre-auth',
     loadChildren: () => import('./modules/pre-auth/pre-auth.module').then( m => m.PreAuthModule)
   },
+  {path:'post-auth',
+    loadChildren: () => import('./modules/post-auth/post-auth.module').then( m => m.PostAuthModule)
+  },
   {
     path:'',
     redirectTo: 'pre-auth',
