@@ -1,0 +1,43 @@
+<div class="container-fluid vh-100 d-flex justify-content-center align-items-center bg-light" style="background-color: red;">
+  <div class="row w-100 shadow rounded overflow-hidden" style="background-color: white;">
+
+    <!-- Left Section -->
+    <div class="col-md-6 bg-primary-left d-flex flex-column justify-content-center align-items-center p-5 bg-white">
+      <h3 class="fw-bold text-center mb-4">One Click To go All Digital</h3>
+      <img src="assets/images/sign-in/sign-in-img.png" alt="Illustration" class="img-fluid" style="max-height: 400px;" />
+    </div>
+
+    <!-- Right Section -->
+    <div class="col-md-6 bg-primary-right p-5 d-flex flex-column justify-content-center">
+      <img src="assets/images/sign-in/laptop.png" alt="Illustration" class="img-fluid" style="max-width: 388px; align-self: center;" />
+      <div class="card border-0 shadow-sm p-4 rounded-4">
+        <h4 class="fw-bold text-center mb-4">Sign In</h4>
+
+        <form>
+          <!-- Email -->
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Email</label>
+            <input type="email" class="form-control rounded-3" placeholder="Enter user name" />
+          </div>
+
+          <!-- Password -->
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Password*</label>
+            <input type="password" class="form-control rounded-3" placeholder="Enter Your Password" />
+          </div>
+
+          <!-- Forgot Password -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <a (click)="goToForgotPassword()" class="text-decoration-none text-primary small">Forgot Password?</a>
+          </div>
+
+          <!-- Sign In Button -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary rounded-3 fw-semibold">Sign In</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

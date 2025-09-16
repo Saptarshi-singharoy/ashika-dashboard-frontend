@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PreAuthComponent } from './pre-auth.component';
+import { PreAuthRoutingModule } from './pre-auth-routing.module';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    PreAuthComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    PreAuthRoutingModule
   ]
 })
 export class PreAuthModule { }
