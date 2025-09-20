@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../../environments/environment';
+
 
 interface DetailsData{
   info: {} | null,
@@ -13,7 +15,7 @@ interface DetailsData{
 export class DetailsComponent  implements OnInit{
   constructor(private http: HttpClient){}
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/details').subscribe({
+    this.http.get(`${environment.apiUrl}/details`).subscribe({
       next: (data: DetailsData | any) => {
         this.info = data.info;
         this.registration = data.registration;

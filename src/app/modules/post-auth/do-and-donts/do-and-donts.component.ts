@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-do-and-donts',
@@ -11,7 +12,7 @@ export class DoAndDontsComponent implements OnInit{
 
   rules: string[] = [];
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/doanddonts').subscribe({
+    this.http.get(`${environment.apiUrl}/doanddonts`).subscribe({
       next: (data: any) => {
         this.rules = data.rules;
       }

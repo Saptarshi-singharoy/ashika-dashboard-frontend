@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 interface ClientRow {
   sl: string;
@@ -53,7 +54,7 @@ export class TableComponent implements OnInit {
     //     retention: '353687'
     //   });
     // }
-    this.http.get('http://localhost:3000/clients').subscribe({
+    this.http.get(`${environment.apiUrl}/clients`).subscribe({
       next: (data) => {
         this.allRows = data as ClientRow[];
         this.total = this.allRows.length;

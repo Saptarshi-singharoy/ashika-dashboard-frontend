@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-
+import { environment } from '../../../../environments/environment';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -13,7 +13,7 @@ failed: boolean = false;
   }
   ngOnInit(): void {
     try {
-      this.http.get('http://localhost:3000/dashboard').subscribe({
+      this.http.get(`${environment.apiUrl}/dashboard`).subscribe({
       next: (data:any) => {
         console.log("DARA", data);
         this.revenue = data.revenue;
