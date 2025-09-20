@@ -1,1 +1,60 @@
-<p>details works!</p>
+<div class="mb-4">
+  <h5>Information</h5>
+</div>
+
+<div class="info-bar">
+  <div class="info-pill"><span>Full Name</span> {{info.fullName}}</div>
+  <div class="info-pill"><span>Back Office ID</span> {{info.backOfficeId}}</div>
+  <div class="info-pill"><span>Terminal ID</span> {{info.terminalId}}</div>
+  <div class="info-pill"><span>Branch Code</span> {{info.branchCode}}</div>
+</div>
+
+<div class="details-card mt-3">
+  <h5 class="section-title">Registration Details</h5>
+
+  <div class="row">
+    <!-- Left column -->
+    <div class="col-md-6">
+      <div class="form-group row" *ngFor="let field of [
+        {label: 'Applicant Name', value: registration.applicantName},
+        {label: 'Trade Name', value: registration.tradeName},
+        {label: 'PAN No', value: registration.pan},
+        {label: 'Constitution', value: registration.constitution},
+        {label: 'RM Name', value: registration.rmName},
+        {label: 'NSE Segment', value: registration.nseSegment},
+        {label: 'NSE CO Reg- No', value: registration.nseCoRegNo},
+        {label: 'NSE CO Reg- Date', value: registration.nseCoRegDate},
+        {label: 'BSE Segments', value: registration.bseSegments},
+        {label: 'BSE Reg- No', value: registration.bseRegNo},
+        {label: 'BSE Reg- Date', value: registration.bseRegDate}
+      ]">
+        <label class="col-sm-5 col-form-label">{{field.label}}</label>
+        <div class="col-sm-7">
+          <input class="form-control form-control-sm" [value]="field.value" readonly>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column -->
+    <div class="col-md-6">
+      <div class="form-group row" *ngFor="let field of [
+        {label: 'NSE CM Reg- No', value: registration.nseCmRegNo},
+        {label: 'NSE CM Reg- Date', value: registration.nseCmRegDate},
+        {label: 'NSE FNO Reg- No', value: registration.nseFnoRegNo},
+        {label: 'NSE FNO Reg- Date', value: registration.nseFnoRegDate},
+        {label: 'NSE CF Reg- No', value: registration.nseCfRegNo},
+        {label: 'NSE CF Reg- Date', value: registration.nseCfRegDate},
+        {label: 'NCDEX Reg- No', value: registration.ncdexRegNo},
+        {label: 'NCDEX Reg- Date', value: registration.ncdexRegDate},
+        {label: 'MSEI Reg- No', value: registration.mseiRegNo},
+        {label: 'MSEI Segment', value: registration.mseiSegment},
+        {label: 'MSEI Reg- Date', value: registration.mseiRegDate}
+      ]">
+        <label class="col-sm-5 col-form-label">{{field.label}}</label>
+        <div class="col-sm-7">
+          <input class="form-control form-control-sm" [value]="field.value" readonly>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,139 @@
+.table-card {
+  background: #f7fbff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(12, 40, 80, 0.03);
+  color: #243347;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.section-title {
+  margin: 0;
+  font-weight: 600;
+  color: #6b7c8e;
+}
+.link-active {
+  color: #1e73ff;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+.action-pill {
+  border-radius: 22px;
+  padding: 8px 14px;
+  background: #fff;
+  border: none;
+  box-shadow: 0 6px 12px rgba(18, 53, 91, 0.04);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* small divider */
+.divider {
+  border: none;
+  height: 1px;
+  background: #e6eef8;
+  margin: 12px 0;
+}
+
+/* search row */
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #eaf4ff;
+  margin-bottom: 12px;
+}
+
+.search-input {
+  flex: 1;
+}
+.search-input .form-control {
+  border-radius: 20px;
+  height: 44px;
+}
+
+/* table container */
+.table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 6px 10px rgba(18, 53, 91, 0.03);
+}
+
+/* horizontal scroll area for wide tables */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* table style */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1100px; /* ensure horizontal scroll on small screens */
+}
+
+.data-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #ffffff;
+  text-align: left;
+  padding: 18px 22px;
+  font-weight: 600;
+  color: #6b7c8e;
+  border-bottom: 1px solid #e6eef8;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.data-table tbody td {
+  padding: 18px 22px;
+  border-bottom: 1px solid #efefef;
+  color: #546778;
+  white-space: nowrap;
+}
+
+/* subtle row spacing like your screenshot */
+.data-table tbody tr {
+  background: transparent;
+}
+.data-table tbody tr:nth-child(even) td {
+  /* optional */
+}
+
+/* small, muted left column */
+.muted {
+  color: #8e9aa8;
+  font-weight: 600;
+}
+
+/* monospaced numbers */
+.mono {
+  font-family: "Roboto Mono", monospace;
+}
+
+/* pagination row */
+.pagination-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}

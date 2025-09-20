@@ -1,0 +1,37 @@
+.adherence-container {
+  // max-width: 900px;
+  margin: 2rem auto;
+  background-color: #eaf3fb;
+  padding: 2rem;
+  border-radius: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.adherence-container h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.adherence-box {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.adherence-box ol {
+  padding-left: 1.2rem;
+}
+
+.adherence-box li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: #999;
+}

@@ -13,17 +13,17 @@
       <div class="card border-0 shadow-sm p-4 rounded-4">
         <h4 class="fw-bold text-center mb-4">Sign In</h4>
 
-        <form>
+        <form (ngSubmit)="onSubmit()" #f="ngForm">
           <!-- Email -->
           <div class="mb-3">
             <label class="form-label fw-semibold">Email</label>
-            <input type="email" class="form-control rounded-3" placeholder="Enter user name" />
+            <input [(ngModel)]="formData.email" type="email" name="email" class="form-control rounded-3" placeholder="Enter user name" />
           </div>
 
           <!-- Password -->
           <div class="mb-3">
             <label class="form-label fw-semibold">Password*</label>
-            <input type="password" class="form-control rounded-3" placeholder="Enter Your Password" />
+            <input [(ngModel)]="formData.password" type="password" name="password" class="form-control rounded-3" placeholder="Enter Your Password" />
           </div>
 
           <!-- Forgot Password -->

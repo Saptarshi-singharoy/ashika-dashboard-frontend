@@ -1,0 +1,70 @@
+<div class="table-card">
+  <div class="card-header-row">
+    <div class="title-row">
+      <h3 class="section-title">Mutual Found</h3>
+      <a class="link-active">Broking</a>
+    </div>
+
+    <div class="actions">
+      <button class="action-pill" (click)="sendEmail()">
+        <i class="bi bi-envelope"></i> Send Email
+      </button>
+      <button class="action-pill" (click)="downloadExcel()">
+        <i class="bi bi-file-earmark-spreadsheet"></i> Download XCEL
+      </button>
+      <button class="action-pill" (click)="downloadPdf()">
+        <i class="bi bi-file-earmark-pdf"></i> Download PDF
+      </button>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="search-row">
+    <div class="search-input">
+      <input type="text" class="form-control" placeholder="Search By client name & idnumber..."
+             [(ngModel)]="searchText" (ngModelChange)="onSearchChange($event)">
+    </div>
+
+    <div class="dropdown-area">
+      <button class="btn btn-outline-primary">Commission Ledger <i class="bi bi-caret-down-fill"></i></button>
+    </div>
+  </div>
+
+  <div class="table-wrapper">
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Sl No</th>
+            <th>Code</th>
+            <th>Client Name</th>
+            <th>Normal</th>
+            <th>Delivery</th>
+            <th>Futures</th>
+            <th>Option</th>
+            <th>Incentive</th>
+            <th>Retention</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of rows">
+            <td class="muted">{{row.sl}}</td>
+            <td>{{row.code}}</td>
+            <td>{{row.name}}</td>
+            <td class="mono">{{row.normal}}</td>
+            <td class="mono">{{row.delivery}}</td>
+            <td class="mono">{{row.futures}}</td>
+            <td class="mono">{{row.option}}</td>
+            <td class="mono">{{row.incentive}}</td>
+            <td class="mono">{{row.retention}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="pagination-row">
+    <ngb-pagination [collectionSize]="total" [(page)]="page" [pageSize]="pageSize" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>
+  </div>
+</div>

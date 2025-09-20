@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PostAuthComponent } from './post-auth.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: PostAuthComponent,
+    canActivate:[AuthGuard],
     children: [
 {
     path: 'dashboard',

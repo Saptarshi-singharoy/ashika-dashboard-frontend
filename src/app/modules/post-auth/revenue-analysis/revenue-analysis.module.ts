@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RevenueAnalysisComponent } from './revenue-analysis.component';
 import { RevenueAnalysisRoutingModule } from './revenue-analysis-routing.module';
+import { SharedModule } from '../../../shared/shared.module';
 
 
 
@@ -11,7 +12,8 @@ import { RevenueAnalysisRoutingModule } from './revenue-analysis-routing.module'
   ],
   imports: [
     CommonModule,
-    RevenueAnalysisRoutingModule
+    RevenueAnalysisRoutingModule,
+    SharedModule
   ]
 })
 export class RevenueAnalysisModule { }

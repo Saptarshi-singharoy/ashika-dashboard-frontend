@@ -1,0 +1,131 @@
+.edit-profile-wrapper {
+  padding: 2rem;
+  background-color: #eaf3fb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cover-image {
+  background: linear-gradient(to right, #0d47a1, #1976d2);
+  height: 150px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.change-cover-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-card {
+  display: flex;
+  background-color: white;
+  // margin-top: -75px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.profile-left {
+  background-color: #d5e9fb;
+  padding: 2rem 1rem;
+  text-align: center;
+  width: 260px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px; /* Not circular */
+  margin-bottom: 1rem;
+  border: 3px solid white;
+}
+
+.profile-left h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #003366;
+  margin-top: 0.5rem;
+}
+
+.profile-right {
+  flex: 1;
+  padding: 2rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.full-width {
+  width: 100%;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.password-input {
+  position: relative;
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 1rem;
+}
+
+.change-password-link {
+  margin-top: 0.5rem;
+  color: #0055ff;
+  font-weight: 600;
+  text-decoration: none;
+}

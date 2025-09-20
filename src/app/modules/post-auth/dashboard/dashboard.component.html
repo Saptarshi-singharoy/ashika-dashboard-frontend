@@ -1,1 +1,94 @@
-<p>dashboard works!</p>
+<div *ngIf="failed">Failed To Fetch Data</div>
+
+<div class="dashboard-root">
+  <h2 class="page-title">Dashboard Overview</h2>
+
+  <div class="top-grid">
+    <div class="account-card">
+      <div class="acc-left">
+        <div class="acc-title">Account</div>
+        <div class="acc-sub">Total Revenue</div>
+        <div class="acc-value">{{ revenue }}</div>
+      </div>
+      <div class="acc-right">
+        <div class="stat-pill">
+          including brokerage fees
+          <span class="pill-value">{{ smallStats.brokerage }}</span>
+        </div>
+        <div class="stat-pill">
+          Commissions
+          <span class="pill-value">{{ smallStats.commissions }}</span>
+        </div>
+        <div class="stat-pill">
+          Other sources <span class="pill-value">{{ smallStats.others }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="client-activity">
+      <h4>Client Activity</h4>
+      <div class="client-pill">
+        Total client active <span class="highlight">1.5Lak</span>
+      </div>
+      <div class="client-pill">
+        Dormant Clinets <span class="highlight muted">50k</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-grid">
+    <div class="portfolio">
+      <h3>Portfolio Value</h3>
+
+      <div class="portfolio-card">
+        <div class="portfolio-left">
+          <div class="portfolio-total">{{ portfolioTotal }}</div>
+          <div class="portfolio-profit">
+            Your Profit is <span class="profit">{{ profit }}</span>
+          </div>
+
+          <div class="y-axis-labels">
+            <div>₹500k</div>
+            <div>₹400k</div>
+            <div>₹300k</div>
+            <div>₹200k</div>
+            <div>₹100k</div>
+            <div>₹50k</div>
+          </div>
+
+          <div class="chart-area">
+            <app-line-chart
+              [labels]="months"
+              [values]="values"
+            ></app-line-chart>
+          </div>
+        </div>
+
+        <div class="portfolio-right">
+          <div class="toggle-row">
+            <button class="btn active">Broker</button>
+            <button class="btn">M/F & SIP</button>
+          </div>
+
+          <div class="donut-holder">
+            <app-donut-chart
+              [labels]="donutLabels"
+              [values]="donutValues"
+              [colors]="donutColors"
+            ></app-donut-chart>
+          </div>
+
+          <div class="legend">
+            <div
+              *ngFor="let l of donutLabels; let i = index"
+              class="legend-item"
+            >
+              <span class="swatch" [style.background]="donutColors[i]"></span>
+              <span class="label">{{ l }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

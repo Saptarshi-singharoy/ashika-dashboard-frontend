@@ -1,0 +1,68 @@
+.info-bar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.info-pill {
+  background: #fff;
+  border-radius: 25px;
+  padding: 6px 14px;
+  font-size: 13px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  span {
+    font-weight: 600;
+    color: #333;
+  }
+}
+
+.details-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  color: #4a5b6d;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
+}
+
+.section-title::before {
+  left: 0;
+}
+
+.section-title::after {
+  right: 0;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+label {
+  font-weight: 500;
+  color: #6b7c8e;
+  font-size: 13px;
+}
+
+input.form-control {
+  font-size: 13px;
+  background: #f9fbfd;
+}
