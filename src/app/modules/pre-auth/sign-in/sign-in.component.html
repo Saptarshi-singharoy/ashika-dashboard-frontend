@@ -33,7 +33,10 @@
 
           <!-- Sign In Button -->
           <div class="d-grid">
-            <button type="submit" class="btn btn-primary rounded-3 fw-semibold">Sign In</button>
+            <button type="submit" class="btn btn-primary rounded-3 fw-semibold">
+              <div *ngIf="!loading">Sign In</div>
+              <div *ngIf="loading" class="spinner-border text-dark"></div>
+            </button>
           </div>
         </form>
       </div>
