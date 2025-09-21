@@ -7,7 +7,14 @@ import { environment } from '../../../../environments/environment';
   styleUrl: './dashboard.component.scss',
 })
 export class DashboardComponent implements OnInit {
+toggleBroker() {
+  this.brokerChart=  'broker' ;
+}
+toggleMF() {
+  this.brokerChart=  'MF' ;
+}
 failed: boolean = false;
+brokerChart: string = 'broker';
   constructor(private http: HttpClient ){
     
   }
@@ -15,7 +22,6 @@ failed: boolean = false;
     try {
       this.http.get(`${environment.apiUrl}/dashboard`).subscribe({
       next: (data:any) => {
-        console.log("DARA", data);
         this.revenue = data.revenue;
         this.smallStats = data.smallStats;
         this.portfolioTotal = data.portfolioTotal;

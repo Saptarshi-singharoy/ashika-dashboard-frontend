@@ -40,20 +40,6 @@ export class TableComponent implements OnInit {
   }
 
   ngOnInit() {
-    // create sample dataset (you'll replace with API data)
-    // for (let i = 0; i < 30; i++) {
-    //   this.allRows.push({
-    //     sl: (i + 1).toString().padStart(2, '0'),
-    //     code: 'A0001234',
-    //     name: 'Arun Kumar Sutar',
-    //     normal: '12334',
-    //     delivery: '384165.00',
-    //     futures: '00.00',
-    //     option: '654678',
-    //     incentive: '45765887',
-    //     retention: '353687'
-    //   });
-    // }
     this.http.get(`${environment.apiUrl}/clients`).subscribe({
       next: (data) => {
         this.allRows = data as ClientRow[];

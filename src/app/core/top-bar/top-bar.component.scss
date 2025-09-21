@@ -2,6 +2,23 @@
   border-radius: 10px;
 }
 
+.search {
+  position: relative;
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+  }
+
+  .srch {
+    padding-left: 2.2rem; // space for icon
+  }
+}
+
 .topbar {
   display: flex;
   align-items: center;

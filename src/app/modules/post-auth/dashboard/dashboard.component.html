@@ -5,7 +5,18 @@
 
   <div class="top-grid">
     <div class="account-card">
-      <div class="acc-left">
+      <div
+        class="acc-left"
+        style="
+          background-image: url('../../../../assets/images/bgcard.png');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 40%;
+          padding: 30px;
+          border-radius: 20px;
+        "
+      >
         <div class="acc-title">Account</div>
         <div class="acc-sub">Total Revenue</div>
         <div class="acc-value">{{ revenue }}</div>
@@ -15,11 +26,11 @@
           including brokerage fees
           <span class="pill-value">{{ smallStats.brokerage }}</span>
         </div>
-        <div class="stat-pill">
+        <div class="stat-pill" style="background-color: #ffe6b0">
           Commissions
           <span class="pill-value">{{ smallStats.commissions }}</span>
         </div>
-        <div class="stat-pill">
+        <div class="stat-pill" style="background-color: #d5f7e6">
           Other sources <span class="pill-value">{{ smallStats.others }}</span>
         </div>
       </div>
@@ -66,11 +77,21 @@
 
         <div class="portfolio-right">
           <div class="toggle-row">
-            <button class="btn active">Broker</button>
-            <button class="btn">M/F & SIP</button>
+            <button
+              (click)="toggleBroker()"
+              [ngClass]="{ active: brokerChart === 'broker', btn: true }"
+            >
+              Broker
+            </button>
+            <button
+              (click)="toggleMF()"
+              [ngClass]="{ active: brokerChart === 'MF', btn: true }"
+            >
+              M/F & SIP
+            </button>
           </div>
 
-          <div class="donut-holder">
+          <div *ngIf="brokerChart === 'broker'" class="donut-holder">
             <app-donut-chart
               [labels]="donutLabels"
               [values]="donutValues"
@@ -78,13 +99,31 @@
             ></app-donut-chart>
           </div>
 
-          <div class="legend">
+          <div *ngIf="brokerChart === 'MF'" class="donut-holder">
+            <app-donut-chart
+              [labels]="['Mutual Fund', 'Systematic Investment Plan']"
+              [values]="[50, 50]"
+              [colors]="['#23278E', '#C8A6FF']"
+            ></app-donut-chart>
+          </div>
+
+          <div *ngIf="brokerChart === 'broker'" class="legend">
             <div
               *ngFor="let l of donutLabels; let i = index"
               class="legend-item"
             >
               <span class="swatch" [style.background]="donutColors[i]"></span>
               <span class="label">{{ l }}</span>
+            </div>
+          </div>
+          <div *ngIf="brokerChart === 'MF'" class="legend">
+            <div class="legend-item">
+              <span class="swatch" [style.background]="'#C9A6FF'"></span>
+              <span class="label">Mutual Fund</span>
+            </div>
+            <div class="legend-item">
+              <span class="swatch" [style.background]="'#1E73FF'"></span>
+              <span class="label">Systematic Investment Plan</span>
             </div>
           </div>
         </div>

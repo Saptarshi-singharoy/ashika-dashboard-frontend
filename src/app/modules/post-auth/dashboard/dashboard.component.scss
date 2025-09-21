@@ -15,7 +15,8 @@
   align-items: flex-start;
 }
 .account-card {
-  background: linear-gradient(135deg, #e8f3ff 0%, #eff8ff 100%);
+  // background: linear-gradient(135deg, #e8f3ff 0%, #eff8ff 100%);
+  background-color: white;
   border-radius: 12px;
   padding: 18px;
   display: flex;
@@ -30,15 +31,15 @@
 }
 .acc-title {
   font-weight: 700;
-  color: #12355b;
+  color: #023e7a;
 }
 .acc-sub {
-  color: #567;
+  color: #023e7a;
 }
 .acc-value {
   font-weight: 800;
   font-size: 24px;
-  color: #0b3b66;
+  color: #023e7a;
 }
 
 .acc-right {
@@ -46,6 +47,7 @@
   flex-direction: column;
   gap: 8px;
   align-items: flex-end;
+  width: 54%;
 }
 .stat-pill {
   background: #f3eeff;
@@ -55,6 +57,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 80%;
 }
 .pill-value {
   background: white;

@@ -8,13 +8,15 @@ import{ Chart, registerables} from 'chart.js';
 import { TableComponent } from './table/table.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { HalfDonutComponent } from './half-donut/half-donut.component';
 
 Chart.register(...registerables)
 @NgModule({
   declarations: [
     LineChartComponent,
     DonutChartComponent,
-    TableComponent
+    TableComponent,
+    HalfDonutComponent
   ],
   imports: [
     CommonModule,
