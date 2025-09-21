@@ -15,9 +15,11 @@ export class SignInComponent {
     password:''
   }
 
-onSubmit() {
+async onSubmit() {
 console.log(this.formData);
+  
   this.authService.signIn(this.formData)
+
 }
   constructor(private router: Router,private authService: AuthService){}
 

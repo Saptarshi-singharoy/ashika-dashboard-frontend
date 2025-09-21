@@ -19,7 +19,8 @@ export class AuthService {
         this.router.navigate(['post-auth/dashboard']);
       },
       error: (err) => {
-        console.log("Error while sign in", err)
+        console.log("Error while sign in", err);
+        return err;
       }
      })
 

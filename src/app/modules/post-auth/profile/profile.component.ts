@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
+password: string = 'password';
+
+show() {
+  this.password = this.password === 'text' ? 'password' : 'text';
+}
+
 
 }

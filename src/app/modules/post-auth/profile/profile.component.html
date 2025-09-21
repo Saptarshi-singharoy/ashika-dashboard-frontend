@@ -29,8 +29,8 @@
       <div class="form-group full-width">
         <label>Password</label>
         <div class="password-input">
-          <input type="password" value="********" />
-          <span class="toggle-icon">👁️</span>
+          <input [type]="password" value="chirag123" />
+          <span (click)="show()" class="toggle-icon">👁️</span>
         </div>
         <a class="change-password-link">Change password</a>
       </div>

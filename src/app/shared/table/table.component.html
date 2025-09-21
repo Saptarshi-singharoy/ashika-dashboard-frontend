@@ -26,8 +26,15 @@
              [(ngModel)]="searchText" (ngModelChange)="onSearchChange($event)">
     </div>
 
-    <div class="dropdown-area">
-      <button class="btn btn-outline-primary">Commission Ledger <i class="bi bi-caret-down-fill"></i></button>
+    <div class="dropdown-area" ngbDropdown>
+      <button class="btn btn-outline-primary" ngbDropdownToggle>
+        {{selectedToggle}}
+      </button>
+      <div ngbDropdownMenu>
+        <button (click)="show($event)" ngbDropdownItem>Commission Ledger</button>
+        <button (click)="show($event)" ngbDropdownItem>Brokerage Ledger</button>
+        <button (click)="show($event)" ngbDropdownItem>Incentive Report</button>
+      </div>
     </div>
   </div>
 

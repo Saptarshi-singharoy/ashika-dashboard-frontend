@@ -20,6 +20,10 @@ interface ClientRow {
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
+  selectedToggle:string = 'Commission Ledger'
+show($event: any) {
+this.selectedToggle = $event.srcElement.innerText
+}
 
   constructor(private http: HttpClient){}
   // UI state
